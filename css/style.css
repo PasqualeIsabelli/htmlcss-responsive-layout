@@ -1,22 +1,25 @@
 :root {
   --nav-background: #0084fd;
+  --primary-card-background: #b5ddff;
+  --secondary-card-background: #9792e4;
+  --footer-background: #333333;
 }
 
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /*Header e Nav*/
 nav {
   width: 100%;
-  max-width: 480px;
   margin: auto;
-  padding: .9rem 1.2rem;
+  padding: .9rem 2rem;
   background-color: var(--nav-background);
 }
 .nav-container {
@@ -31,8 +34,8 @@ nav {
   padding: 1rem;
   font-size: 25px;
   position: absolute;
-  right: 3px;
-  top: 4px;
+  right: 2rem;
+  top: .25rem;
 }
 .nav-menu:focus ~ ul {
   display: block;
@@ -51,6 +54,95 @@ nav ul a {
 .nav-btn {
   border: none;
   background-color: white;
-  border-radius: 50%;     
+  border-radius: 20px;     
   padding: 4px 10px;
+}
+
+/*Main*/
+section{
+  width: 100%;
+  padding: 3rem 2rem;
+  border: 1px solid green;
+}
+.row {
+  width: 100%;
+  max-width: 992px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed blue;
+}
+.col {
+  width: 100%;
+  margin: .8rem 0;
+}
+.col-l {
+  height: 650px;
+}
+.col-m {
+  height: 575px;
+}
+.col-s {
+  height: 550px;
+}
+.col-xs {
+  height: 500px;
+}
+.col-xxs {
+  height: 400px;
+}
+
+/*Footer*/
+
+
+/*Stili*/
+.purple {
+  background-color: var(--secondary-card-background);
+}
+.black {
+  background-color: var(--footer-background);
+}
+.primary-bg {
+  background-color: var(--primary-card-background);
+}
+.secondary-bg {
+  background-color: var(--secondary-card-background);
+}
+.third-bg {
+  background-color: white;
+}
+.primary-border {
+  border-radius: 20px;
+}
+.secondary-border {
+  border-radius: 50px;
+}
+
+/*Media query*/
+
+/*Tablet*/
+@media screen and (min-width: 480px) {
+  .row {
+    
+  }
+  .col-l {
+    height: 650px;
+  }
+  .col-m {
+    height: 575px;
+  }
+  .col-s {
+    height: 550px;
+  }
+  .col-xs {
+    height: 500px;
+  }
+  .col-xxs {
+    height: 400px;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 768px) {
+  
 }
